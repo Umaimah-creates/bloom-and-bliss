@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop | Bloom & Blush</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- === Navbar === -->
+  <header class="navbar">
+    <div class="logo">Bloom & Blush</div>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active-link">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="cart-icon" id="cartIcon">🛒<span id="cartCount">0</span></div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- === Shop Section === -->
+  <section class="shop">
+    <h2>Fresh Picks for Every Occasion</h2>
+    <div class="shop-grid">
+
+      <div class="product-card" data-name="Rose Bouquet" data-price="2500" data-image="assets/rose-bouquet.jpg">
+        <img src="assets/rose-bouquet.jpg" alt="rose bouquet">
+        <h3>Rose Bouquet</h3>
+        <p class="price">Rs. 2,500</p>
+      </div>
+
+      <div class="product-card" data-name="Tulips" data-price="3000" data-image="assets/tulips-bouquet.jpg">
+        <img src="assets/tulips-bouquet.jpg" alt="tulips bouquet">
+        <h3>Tulips</h3>
+        <p class="price">Rs. 3,000</p>
+      </div>
+
+      <div class="product-card" data-name="White Lilies" data-price="2200" data-image="assets/lilies.jpg">
+        <img src="assets/lilies.jpg" alt="white lilies">
+        <h3>White Lilies</h3>
+        <p class="price">Rs. 2,200</p>
+      </div>
+
+      <div class="product-card" data-name="Forget-Me-Nots" data-price="1800" data-image="assets/forget-me-nots.jpg">
+        <img src="assets/forget-me-nots.jpg" alt="forget-me-nots">
+        <h3>Forget-Me-Nots</h3>
+        <p class="price">Rs. 1,800</p>
+      </div>
+
+      <div class="product-card" data-name="Daffodils" data-price="2000" data-image="assets/daffodils.jpg">
+        <img src="assets/daffodils.jpg" alt="daffodils">
+        <h3>Daffodils</h3>
+        <p class="price">Rs. 2,000</p>
+      </div>
+
+      <div class="product-card" data-name="Daisies" data-price="1600" data-image="assets/daisies.jpg">
+        <img src="assets/daisies.jpg" alt="daisies">
+        <h3>Daisies</h3>
+        <p class="price">Rs. 1,600</p>
+      </div>
+
+      <div class="product-card" data-name="Peach Peonies" data-price="2700" data-image="assets/peonies.jpg">
+        <img src="assets/peonies.jpg" alt="peach peonies">
+        <h3>Peach Peonies</h3>
+        <p class="price">Rs. 2,700</p>
+      </div>
+
+      <div class="product-card" data-name="Lavender" data-price="3000" data-image="assets/lavender.jpg">
+        <img src="assets/lavender.jpg" alt="lavender flowers">
+        <h3>Lavender</h3>
+        <p class="price">Rs. 3,000</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- === Footer === -->
+  <footer class="footer">
+    <div class="footer-brand">Bloom & Blush</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2025 Bloom & Blush. All rights reserved.</p>
+  </footer>
+
+  <!-- === Product Modal === -->
+  <div class="product-modal" id="productModal">
+    <div class="modal-content">
+      <span class="modal-close" id="modalClose">&times;</span>
+      <img src="" id="modalImg" alt="Product Image" />
+      <h3 id="modalTitle">Product Title</h3>
+      <p id="modalPrice">Rs. 0000</p>
+      <a href="#" class="btn" id="addToCartBtn">Add to Cart</a>
+    </div>
+  </div>
+
+  <!-- === Confirmation Popup === -->
+  <div id="confirmationPopup" class="confirmation-popup">Item added to cart!</div>
+
+  <!-- === Cart Drawer === -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <span id="closeCart">&times;</span>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <p>Total: Rs. <span id="cartTotal">0</span></p>
+      <button class="checkout-btn">Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
